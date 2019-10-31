@@ -1,0 +1,44 @@
+.footer {
+  min-height: 400px;
+  background-color: #222;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Overpass";
+  // font-family: "Voltaire";
+}
+
+.footer-container {
+  display: flex;
+}
+
+.column {
+  margin: 20px 50px;
+
+  h5 {
+    color: #999;
+  }
+
+  p, a {
+    color: #e5dfd9;
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+
+  p:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.designer {
+  margin-top: 90px;
+  font-family: "Satisfy";
+
+  a {
+    color: white;
+    cursor: pointer;
+  }
+}
