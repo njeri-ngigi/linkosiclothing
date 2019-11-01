@@ -15,7 +15,7 @@ class Navbar extends Component {
   }
 
   handleScrollEvent() {
-    if (window.scrollY > 70) {
+    if (window.scrollY > 50) {
       this.setState({ scrollClass: "sticky" });
     } else {
       this.setState({ scrollClass: "" });
@@ -23,18 +23,24 @@ class Navbar extends Component {
   }
 
   render() {
-    const navItemsClass = `nav-items ${this.state.scrollClass}`
+    const navbarClass = `navbar ${this.state.scrollClass}`
     return (
-      <div className="navbar">
-        <h2>L & C</h2>
-        <div className={navItemsClass}>
-          <span>WHAT'S NEW</span>
-          <span>WOMEN</span>
-          <span>MEN</span>
-          <span>TEENS</span>
-          <span>KIDS</span>
+      <div>
+        <div className={navbarClass}>
+          <div className="nav-items">
+            <span><u>WHAT'S NEW</u></span>
+            <span>WOMEN</span>
+            <span>MEN</span>
+            <span>TEENS</span>
+            <span>KIDS</span>
+          </div>
+          <div class="logo">
+              <span class="span-abs"></span>
+              <h3>L & C</h3>
+          </div>
         </div>
       </div>
+      
     );
   }
 }
