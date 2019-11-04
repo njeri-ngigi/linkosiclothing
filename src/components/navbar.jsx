@@ -34,8 +34,8 @@ class Navbar extends Component {
             <span>TEENS</span>
             <span>KIDS</span>
           </div>
-          <div class="logo">
-              <span class="span-abs"></span>
+          <div className="logo">
+              <span className="span-abs"></span>
               <h3>L & C</h3>
           </div>
         </div>

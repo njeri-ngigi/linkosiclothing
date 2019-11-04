@@ -19,8 +19,8 @@ const header = () => (
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
       </p>
-      <div class="header__intro--div--arrow">
-        <p class="header__intro--arrow"></p>
+      <div className="header__intro--div--arrow">
+        <p className="header__intro--arrow"></p>
       </div>
       <button className="header__intro--whats--new">What's new</button>
     </div>

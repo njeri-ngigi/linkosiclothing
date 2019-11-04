@@ -1,11 +1,22 @@
 import React from 'react';
-import Card from './card';
-import clothItems from '../../utils/imageObjects';
+import FirstRow from './fisrtRowCards';
+import MoreCards from './moreCards';
+import { womensItems, mensItems } from '../../utils/imageObjects';
 
-const cards = () => {
-  const cardsList = clothItems.map((item, index)=><Card key={`card-${index}`} details={item}/>)
+const NewTitle = () => (
+  <div className="cards-title">
+    <span></span>
+    <span>WHAT'S NEW?</span>
+  </div>
+)
 
-  return <div className="cards">{cardsList}</div>
-};
+const cards = () => (
+  <div className="cards">
+    <NewTitle/>
+    <FirstRow/>
+    <MoreCards imageObjects={womensItems} title="WOMEN"/>
+    <MoreCards imageObjects={mensItems} title="MEN"/>
+  </div>
+);
 
 export default cards;

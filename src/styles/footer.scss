@@ -16,6 +16,8 @@
 
 .column {
   margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
 
   h5 {
     color: #999;
@@ -27,9 +29,17 @@
     font-size: 0.7em;
   }
 
-  p:hover {
+  p:hover, a:hover {
     color: #fff;
+    text-decoration: underline;
     cursor: pointer;
+  }
+
+  .social-icons {
+    margin: 5px 0;
+    span, a {
+      margin: 5px;
+    }
   }
 }
 

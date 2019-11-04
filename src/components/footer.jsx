@@ -1,5 +1,14 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import socialUrls from '../utils/socialUrls';
 import '../styles/footer.scss';
+
+const socialIcons = () => socialUrls.map(({ url, icon, text }) => (
+  <span class="social-icons">
+    <span><FontAwesomeIcon icon={icon}/></span>
+    <a href={url} target="_blank" rel="noopener noreferrer">{text}</a>
+  </span>
+))
 
 const footer = () => (
   <div className="footer">
@@ -14,11 +23,7 @@ const footer = () => (
       </div>
       <div className="column">
         <h5>FIND US</h5>
-        <a href="https://www.instagram.com/linkosiclothing/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <p>Twitter</p>
-        <p>Facebook</p>
-        <p>Youtube</p>
-        <p>Pinterest</p>
+        {socialIcons()}
       </div>
     </div>
     <p className="designer">designed by <a href="https://www.twitter.com/nj3ry" target="_blank" rel="noopener noreferrer">@nj3ry</a></p>

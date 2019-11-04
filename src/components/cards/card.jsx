@@ -1,44 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../styles/cards.scss';
 
+const card = ({ details: { imageUrls: [imageUrl], description, price } }) => (
+  <div className="card">
+    <div className="card-image">
+      <img src={imageUrl} alt={description}/>
+    </div>
+    <p className="price">{price}</p>
+    <div className="image-description">
+      <p>{description}</p>
+    </div>
+  </div>
+);
 
-class Card extends Component {
-  state = {
-    imageIndex: 0
-  }
+export default card;
 
-  handleClick(arraySize) {
-    let index = this.state.imageIndex;
-    index++;
-    if (index >= arraySize) index = 0;
-    this.setState({ imageIndex: index })
-  }
-
-  render() {
-    const { details } = this.props;
-    const { imageUrls, price, description } = details;
-
-    return (
-      <div className="card">
-        <div className="image">
-          <img src={imageUrls[this.state.imageIndex]} alt={description}/>
-          <p className="price">{price}</p>
-          { 
-            imageUrls.length > 1 && 
-            <span className="next-image" onClick={() => this.handleClick(imageUrls.length)}>&#8250;</span>
-          }
-        </div>
-        <div className="description-container">
-          <div className="description">
-            <div className="sample-image">
-              <img  src={imageUrls[0]} alt={description}/>
-            </div>
-            <p>{description}</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-}
-
-export default Card;
+// TODO: on hover show shopping cart on card
