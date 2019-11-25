@@ -2,14 +2,19 @@
 .header {
   display: flex;
   width: 100%;
-  // background-color: pink;
+  // background-color: lightsalmon;
   padding-bottom: 30px;
+  // position: absolute;
+  height: 100%;
 
   .header__social--icons {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     align-self: center;
+    // background-color: pink;
+    height: 100%;
+    // position: absolute;
 
     span {
       padding: 15px;
@@ -126,6 +131,65 @@
   }
 }
 
+.pulse {
+  min-height: 800px;
+  width: 50%;
+  position: absolute; 
+  z-index: -1;
+}
+
+// .pulsing-header {
+//   @extend .pulse;
+//   background-color: pink;
+//   min-height: 0px;
+//   animation: 4s pulse;
+
+//   background-image: url("/images/linkosiclothing/camo.jpg");
+
+
+// }
+
+// .pulsing-header-2 {
+//   @extend .pulse;
+//   background-color: peachpuff;
+//   min-height: 0px;
+//   z-index: -2;
+//   animation: 4s pulse;
+//   animation-delay: 1s;
+// }
+
+// .pulsing-header-3 {
+//   @extend .pulse;
+//   background-color: #ffcccb;
+//   min-height: 0px;
+//   z-index: -3;
+//   animation: 3s pulse;
+//   animation-delay: 2s;
+//   background-image: url("/images/linkosiclothing/camo-2.jpg");
+
+// }
+
+// .pulsing-header-4 {
+//   @extend .pulse;
+//   background-color: lightcyan;
+//   min-height: 0px;
+//   z-index: -4;
+
+//   animation: 3s pulse;
+//   animation-delay: 3s;
+// }
+
+// .pulsing-header-5 {
+//   @extend .pulse;
+//   background-color: lightgoldenrodyellow;
+//   min-height: 0px;
+//   z-index: -5;
+//   animation: 3s pulse;
+//   animation-delay: 4s;
+//   background-image: url("/images/linkosiclothing/camo-3.jpg");
+
+
+// }
 
 @keyframes underline-header-span {
   0% {
@@ -141,14 +205,23 @@
   }
 }
 
-@keyframes hover {
-  0% {
-    min-height: 180px;
-  }
-  50% {
-    min-height: 230px;
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
+// @keyframes hover {
+//   0% {
+//     min-height: 180px;
+//   }
+//   50% {
+//     min-height: 230px;
+//   }
+//   100% {
+//     transform: translateY(0px);
+//   }
+// }
+
+// @keyframes pulse {
+//   0%{
+//     min-height: 800px;
+//   }
+//   100% {
+//     min-height: 0px;
+//   }
+// }

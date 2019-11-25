@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   width: 100%;
+  font-weight: bolder;
 
   .nav-items {
     display: flex;
@@ -12,6 +13,10 @@
     span {
       padding: 20px;
     }
+
+    // span:nth-child(1) {
+    //   @extend .active
+    // }
 
     span:hover {
       text-decoration: underline;
