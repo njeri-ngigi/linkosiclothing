@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import Card from './card';
@@ -6,9 +7,11 @@ import Card from './card';
 const cards = (imageObjects) => (imageObjects.slice(0, 3)
   .map((item, index)=><Card key={`card-${index}`} details={item}/>))
 
-const more = () => (
+const more = (designType) => (
   <div className="more-cards">
-    <p><FontAwesomeIcon icon={faAngleRight}/></p>
+    <Link to={`/designs/${designType}`}>
+      <p><FontAwesomeIcon icon={faAngleRight}/></p>
+    </Link>
     <p>MORE ...</p>
   </div>
 )
@@ -27,26 +30,26 @@ const mixCards = (imageObjects) => (
 const displayCards = (imageObjects) => (
   imageObjects.length > 3 ? mixCards(imageObjects) : cards(imageObjects)
 )
-const MoreCardsFirstRow = ({ imageObjects, title }) => (
+const MoreCardsFirstRow = ({ imageObjects, title, type }) => (
   <div className="cards--second-row">
     <div className="card-links">
       <p>{title}</p>
     </div>
     <div className="card-images">
       {displayCards(imageObjects)}
-      {imageObjects.length > 4 && more()}
+      {imageObjects.length > 4 && more(type)}
     </div>
   </div>
 )
 
-const MoreCardsSecondRow = ({ imageObjects, title }) => (  
+const MoreCardsSecondRow = ({ imageObjects, title, type }) => (  
   <div className="cards--second-row">
     <div className="card-links">
       <p>{title}</p>
     </div>
     <div className="card-images">
       {cards(imageObjects)}
-      {imageObjects.length > 4 && more()}
+      {imageObjects.length > 4 && more(type)}
     </div>
   </div>
 )

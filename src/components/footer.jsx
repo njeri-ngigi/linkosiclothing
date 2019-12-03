@@ -4,7 +4,7 @@ import socialUrls from '../utils/socialUrls';
 import '../styles/footer.scss';
 
 const socialIcons = () => socialUrls.map(({ url, icon, text }) => (
-  <span class="social-icons">
+  <span className="social-icons">
     <span><FontAwesomeIcon icon={icon}/></span>
     <a href={url} target="_blank" rel="noopener noreferrer">{text}</a>
   </span>

@@ -17,9 +17,9 @@ const cards = () => (
   <div className="cards">
     <NewTitle/>
     <FirstRow/>
-    <MoreCardsFirstRow imageObjects={womensItems} title="WOMEN"/>
-    <MoreCardsSecondRow imageObjects={mensItems} title="MEN"/>
-    <MoreCardsSecondRow imageObjects={kidsTeensItems} title="TEENS & KIDS"/>
+    <MoreCardsFirstRow imageObjects={womensItems} title="WOMEN" type="women"/>
+    <MoreCardsSecondRow imageObjects={mensItems} title="MEN" type="men"/>
+    <MoreCardsSecondRow imageObjects={kidsTeensItems} title="TEENS & KIDS" type="teens&kids"/>
   </div>
 );
 

@@ -1,17 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/cards.scss';
 
-const card = ({ details: { imageUrls: [imageUrl], description, price } }) => (
-  <div className="card">
-    <div className="card-image">
-      <img src={imageUrl} alt={description}/>
+const card = ({ details }) => {
+  const { imageUrls: [imageUrl], description, price } = details;
+  return (
+  <Link
+    to={{
+      pathname: '/cart',
+      state: {
+        details: JSON.stringify(details)
+      }
+    }}>
+    <div className="card">
+      <div className="card-image">
+        <img src={imageUrl} alt={description}/>
+      </div>
+      <p className="price">{price}</p>
+      <div className="image-description">
+        <p>{description}</p>
+      </div>
     </div>
-    <p className="price">{price}</p>
-    <div className="image-description">
-      <p>{description}</p>
-    </div>
-  </div>
-);
+  </Link>
+  
+)};
 
 export default card;
 
