@@ -14,11 +14,10 @@ const ImageCard = ({ url, description, first }) => {
 
 const FirstImage = () => (
   <div className="cards--first-row-column-1-image">
-    <div className="col-1-img">
-      <img src={newItems[0].imageUrls[0]} alt={newItems[0].description}/>
-    </div>
-    <p className="col-1-description">{newItems[0].description}</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div className="col-1-img">
+        <img src={newItems[0].imageUrls[0]} alt={newItems[0].description}/>
+      </div>
+      <p className="col-1-description">{newItems[0].description}</p>
   </div>
 )
 

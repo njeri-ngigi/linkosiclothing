@@ -5,7 +5,7 @@ const imageObjects = [
       'images/linkosiclothing/black-dress-2.jpg'
     ],
     price: 'KES. 2000',
-    description: 'Stylish Black Dress',
+    description: 'Black Dress',
     date: ''
   },
   {
@@ -74,7 +74,7 @@ const womensItems = [
       'images/linkosiclothing/black-dress-2.jpg'
     ],
     price: 'KES. 2000',
-    description: 'Stylish Black Dress',
+    description: 'Black Dress',
     date: ''
   },
   {
@@ -119,10 +119,38 @@ const mensItems = [
   },
 ];
 
+const kidsTeensItems = [
+  {
+    imageUrls: [
+      'images/linkosiclothing/camo.jpg',
+      'images/linkosiclothing/camo-2.jpg',
+    ],
+    price: 'KES. 2000',
+    description: 'Urban Camo',
+    date: ''
+  },
+  {
+    imageUrls: [
+      'images/linkosiclothing/black-dress.jpg',
+      'images/linkosiclothing/black-dress-2.jpg'
+    ],
+    price: 'KES. 2000',
+    description: 'Black Dress',
+    date: ''
+  },
+  {
+    imageUrls: ['images/linkosiclothing/green-suit.jpg'],
+    price: 'KES. 2500',
+    description: 'Neon Green',
+    date: ''
+  }
+];
+
 export {
   newItems,
   womensItems,
-  mensItems
+  mensItems,
+  kidsTeensItems
 }
 
 export default imageObjects;

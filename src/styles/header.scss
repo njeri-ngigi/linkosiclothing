@@ -24,6 +24,7 @@
   .est {
     justify-content: left;
     margin-left: 15px;
+    color: #434343;
 
     p {
       margin-top: 60px;
@@ -57,6 +58,13 @@
 
       span {
         margin-right: 30px;
+        transition: 2s ease-in-out;
+      }
+
+      span:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: 2s ease-in-out;
       }
     }
   }
@@ -79,8 +87,6 @@
       text-align: right;
     }
   }
-
-  
 }
 
 .header-abs {
