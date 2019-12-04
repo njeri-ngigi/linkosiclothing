@@ -1,0 +1,15 @@
+.cards-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .cards-view-div {
+    padding: 20px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -10,13 +10,11 @@
     font-size: 0.8em;
     font-family: "Nunito";
 
-    span {
+    a {
+      text-decoration: none;
+      color: black;
       padding: 20px;
     }
-
-    // span:nth-child(1) {
-    //   @extend .active
-    // }
 
     span:hover {
       text-decoration: underline;
@@ -53,6 +51,11 @@
   box-shadow: 1px 1px 3px #ccc;
   z-index: 10;
   top: 0;
+}
+
+.is-active {
+  text-decoration: underline !important;
+  color: #d13e24 !important;
 }
 
 @keyframes underline-header {

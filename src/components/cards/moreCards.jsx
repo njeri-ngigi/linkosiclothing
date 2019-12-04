@@ -16,27 +16,27 @@ const more = (designType) => (
   </div>
 )
 
-const mixCards = (imageObjects) => (
-  <div className="mixCards">
-    <Card details={imageObjects[0]}/>
-    <div>
-      <Card details={imageObjects[1]}/>
-      <Card details={imageObjects[2]}/>
-    </div>
-    <Card details={imageObjects[3]}/>
-  </div>
-);
+// const mixCards = (imageObjects) => (
+//   <div className="mixCards">
+//     <Card details={imageObjects[0]}/>
+//     <div>
+//       <Card details={imageObjects[1]}/>
+//       <Card details={imageObjects[2]}/>
+//     </div>
+//     <Card details={imageObjects[3]}/>
+//   </div>
+// );
 
-const displayCards = (imageObjects) => (
-  imageObjects.length > 3 ? mixCards(imageObjects) : cards(imageObjects)
-)
+// const displayCards = (imageObjects) => (
+//   imageObjects.length > 3 ? mixCards(imageObjects) : cards(imageObjects)
+// )
 const MoreCardsFirstRow = ({ imageObjects, title, type }) => (
   <div className="cards--second-row">
     <div className="card-links">
       <p>{title}</p>
     </div>
     <div className="card-images">
-      {displayCards(imageObjects)}
+      {cards(imageObjects)}
       {imageObjects.length > 4 && more(type)}
     </div>
   </div>

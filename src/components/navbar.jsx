@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import "../styles/navbar.scss";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import '../styles/navbar.scss';
 
 class Navbar extends Component {
   constructor(props) {
@@ -11,14 +12,14 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScrollEvent);
+    window.addEventListener('scroll', this.handleScrollEvent);
   }
 
   handleScrollEvent() {
-    if (window.scrollY > 50) {
-      this.setState({ scrollClass: "sticky" });
+    if (window.scrollY > 100) {
+      this.setState({ scrollClass: 'sticky' });
     } else {
-      this.setState({ scrollClass: "" });
+      this.setState({ scrollClass: '' });
     }
   }
 
@@ -27,20 +28,19 @@ class Navbar extends Component {
     return (
       <div>
         <div className={navbarClass}>
-          <div className="nav-items">
-            <span><u>WHAT'S NEW</u></span>
-            <span>WOMEN</span>
-            <span>MEN</span>
-            <span>TEENS</span>
-            <span>KIDS</span>
+          <div className='nav-items'>
+            <NavLink to='/'>HOME</NavLink>
+            <NavLink to='/designs/new' activeClassName='is-active'>WHAT'S NEW</NavLink>
+            <NavLink to='/designs/women' exact={true} activeClassName='is-active'>WOMEN</NavLink>
+            <NavLink to='/designs/men' activeClassName='is-active'>MEN</NavLink>
+            <NavLink to='/designs/teens_kids' activeClassName='is-active'>TEENS & KIDS</NavLink>
           </div>
-          <div className="logo">
-              <span className="span-abs"></span>
+          <div className='logo'>
+              <span className='span-abs'></span>
               <h3>L & C</h3>
           </div>
         </div>
       </div>
-      
     );
   }
 }

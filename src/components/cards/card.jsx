@@ -4,6 +4,7 @@ import '../../styles/cards.scss';
 
 const card = ({ details }) => {
   const { imageUrls: [imageUrl], description, price } = details;
+  console.log('>>>>', `${window.location.origin}/${imageUrl}`)
   return (
   <Link
     to={{
@@ -14,7 +15,7 @@ const card = ({ details }) => {
     }}>
     <div className="card">
       <div className="card-image">
-        <img src={imageUrl} alt={description}/>
+        <img src={`${window.location.origin}/${imageUrl}`} alt={description}/>
       </div>
       <p className="price">{price}</p>
       <div className="image-description">

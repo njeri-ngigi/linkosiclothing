@@ -19,7 +19,7 @@ const cards = () => (
     <FirstRow/>
     <MoreCardsFirstRow imageObjects={womensItems} title="WOMEN" type="women"/>
     <MoreCardsSecondRow imageObjects={mensItems} title="MEN" type="men"/>
-    <MoreCardsSecondRow imageObjects={kidsTeensItems} title="TEENS & KIDS" type="teens&kids"/>
+    <MoreCardsSecondRow imageObjects={kidsTeensItems} title="TEENS & KIDS" type="teens_kids"/>
   </div>
 );
 

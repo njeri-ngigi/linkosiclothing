@@ -198,7 +198,7 @@
   @extend .card-sizes;
   box-shadow: 1px 1px 4px #ccc;
   transition: 0.5s ease-in-out;
-  margin: 20px 50px;
+  margin: 20px 30px;
 
   .card-image {
     width: 100%;
@@ -231,7 +231,7 @@
 .card:hover {
   cursor: pointer;
   box-shadow: 1px 3px 5px #ccc;
-  transform: translateY(-5px) ;
+  transform: translateY(-5px);
 
 }
 
@@ -239,12 +239,13 @@
   @extend .flex-center;
   flex-direction: column;
   font-family: "Nunito";
+  margin-left: 5%;
 
   p:nth-child(1) {
     @extend .flex-center;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
+    border-radius: 50%;      
     background-color: #eee;
     color: #434343;
     transition: .5s ease-in-out;
@@ -259,8 +260,8 @@
   }
 }
 
-.mixCards {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+// .mixCards {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }

@@ -20,7 +20,7 @@
       position: absolute;
       width: 500px;
       height: 95%;
-      background-color: rgba($color: #000000, $alpha: 0.5);
+      background-color: rgba($color: #000000, $alpha: 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,5 +46,32 @@
     justify-content: center;
     align-items: center;
     width: 30%;
+
+    button {
+      padding: 15px 50px;
+      font-size: 1em;
+      transition: 0.3s ease-in-out;
+      outline: none;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .not-bought {
+      color: #d13e24;
+      border: 1px solid #d13e24;
+    }
+
+    .not-bought:hover {
+      background-color: #d13e24;
+      color: white;
+    }
+
+    .bought {
+      color: white;
+      background-color: green;
+      border: none;
+    }
   }
 }
